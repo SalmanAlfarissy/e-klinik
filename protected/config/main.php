@@ -16,7 +16,9 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.commands.shell.*',
 		'system.utils.CPasswordHelper',
+		'application.modules.srbac.controllers.SBaseController',
 	),
 
 	'modules'=>array(
@@ -27,10 +29,44 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		'srbac' => array(
+            'class' => 'application.modules.srbac.SrbacModule',
+            'userclass' => 'User',
+            'userid' => 'id',
+            'username' => 'username',
+            'debug' => true,
+            'pageSize' => 10,
+            'superUser' => 'Admin', 
+            'css' => 'srbac.css',
+            'layout' => 'application.views.layouts.main',
+            'notAuthorizedView' => 'application.views.site.unauthorized',
+            'alwaysAllowed' => array(
+                'SiteLogin', 'SiteLogout', 'SiteIndex', 'SiteAdmin', 'SiteError', 'SiteContact'
+            ), 
+            'userActions' => array('Show', 'View', 'List'),
+            'listBoxNumberOfLines' => 15, 
+            'imagesPath' => 'srbac.images', 
+            'imagesPack' => 'noia', 
+            'iconText' => true, 
+            'header' => 'srbac.views.authitem.header',
+            'footer' => 'srbac.views.authitem.footer',
+            'showHeader' => true, 
+            'showFooter' => true, 
+            'alwaysAllowedPath' => 'srbac.components',
+        ),
+	
 	),
 
 	// application components
 	'components'=>array(
+
+		'authManager' => array(
+            'class' => 'CDbAuthManager', 
+            'connectionID' => 'db', 
+            'itemTable' => 'AuthItem', 
+            'assignmentTable' => 'AuthAssignment', 
+            'itemChildTable' => 'AuthItemChild', 
+        ),
 
 		'user'=>array(
 			// enable cookie-based authentication

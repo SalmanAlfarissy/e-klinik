@@ -25,5 +25,11 @@ return array(
 			),
 		),
 
+		'commandMap' => array(
+			'user' => array(
+				'class' => 'application.commands.shell.UserCommand',
+			),
+		),
+
 	),
 );

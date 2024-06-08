@@ -39,16 +39,6 @@ class User extends CActiveRecord
 	}
 
     /**
-     * Hash the password using bcrypt.
-     * @param string $password the password to hash
-     * @return string the hashed password
-     */
-    public function hashPassword($password)
-    {
-        return CPasswordHelper::hashPassword($password);
-    }
-
-    /**
      * Validate the password.
      * @param string $password the password to validate
      * @return boolean whether the password is valid
@@ -60,14 +50,22 @@ class User extends CActiveRecord
 
 	protected function beforeSave()
     {
+		
         if (parent::beforeSave()) {
-            if ($this->isNewRecord || $this->isPasswordChanged()) {
-                $this->password = password_hash($this->password, PASSWORD_BCRYPT);
-            }
+			if ($this->isWebMode()) {
+				if ($this->isNewRecord || $this->isPasswordChanged()) {
+					$this->password = CPasswordHelper::hashPassword($this->password);
+				}
+			}
             return true;
         }
         return false;
     }
+
+	protected function isWebMode()
+	{
+		return PHP_SAPI !== 'cli';
+	}
 
     protected function isPasswordChanged()
     {
