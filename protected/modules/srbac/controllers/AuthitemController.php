@@ -16,6 +16,25 @@
  */
 class AuthitemController extends SBaseController {
 
+  public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array('allow', // allow admin to access SRBAC
+                'roles' => array('admin'),
+            ),
+            array('deny',  // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
+
   /**
    * @var string specifies the default action to be 'list'.
    */

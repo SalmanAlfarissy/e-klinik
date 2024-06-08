@@ -1145,3 +1145,392 @@ Stack trace:
 REQUEST_URI=/index.php/wilayah/admin
 HTTP_REFERER=http://localhost:8080/index.php/wilayah/index
 ---
+2024/06/08 15:40:58 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('tindakan')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tindakan
+---
+2024/06/08 15:56:18 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('getRoles')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/getRoles
+HTTP_REFERER=http://localhost:8080/index.php/srbac/authitem/assign
+---
+2024/06/08 15:56:19 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('getRoles')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/getRoles
+HTTP_REFERER=http://localhost:8080/index.php/srbac/authitem/assign
+---
+2024/06/08 15:56:21 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('getRoles')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/getRoles
+HTTP_REFERER=http://localhost:8080/index.php/srbac/authitem/assign
+---
+2024/06/08 15:56:23 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('getRoles')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/getRoles
+HTTP_REFERER=http://localhost:8080/index.php/srbac/authitem/assign
+---
+2024/06/08 15:56:24 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('manage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/manage
+HTTP_REFERER=http://localhost:8080/index.php/srbac/authitem/assign
+---
+2024/06/08 15:56:31 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:56:32 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:56:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/user
+---
+2024/06/08 15:56:57 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/user
+---
+2024/06/08 15:57:26 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/user
+---
+2024/06/08 15:57:27 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/user
+---
+2024/06/08 15:57:37 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:58:05 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:58:06 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:58:49 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:58:52 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:58:57 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 15:58:58 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 16:02:08 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 16:02:08 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 16:02:14 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('frontpage')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('srbac/authitem/...')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/srbac/authitem/frontpage
+---
+2024/06/08 16:02:19 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/user
+---
+2024/06/08 16:02:20 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/user
+---

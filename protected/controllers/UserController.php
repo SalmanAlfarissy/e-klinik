@@ -27,8 +27,16 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow', 
-				'actions'=>array('index','view','create','update','delete','admin'),
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view'),
+				'roles'=>array('admin'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				'roles'=>array('admin'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users

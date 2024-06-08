@@ -1,6 +1,6 @@
 <?php
 
-class PegawaiController extends Controller
+class TindakanController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,14 +62,14 @@ class PegawaiController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Pegawai;
+		$model=new Tindakan;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Pegawai']))
+		if(isset($_POST['Tindakan']))
 		{
-			$model->attributes=$_POST['Pegawai'];
+			$model->attributes=$_POST['Tindakan'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -91,9 +91,9 @@ class PegawaiController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Pegawai']))
+		if(isset($_POST['Tindakan']))
 		{
-			$model->attributes=$_POST['Pegawai'];
+			$model->attributes=$_POST['Tindakan'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +122,7 @@ class PegawaiController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Pegawai');
+		$dataProvider=new CActiveDataProvider('Tindakan');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class PegawaiController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Pegawai('search');
+		$model=new Tindakan('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Pegawai']))
-			$model->attributes=$_GET['Pegawai'];
+		if(isset($_GET['Tindakan']))
+			$model->attributes=$_GET['Tindakan'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class PegawaiController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Pegawai the loaded model
+	 * @return Tindakan the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Pegawai::model()->findByPk($id);
+		$model=Tindakan::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class PegawaiController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Pegawai $model the model to be validated
+	 * @param Tindakan $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='pegawai-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='tindakan-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
