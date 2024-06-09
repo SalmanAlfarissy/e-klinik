@@ -98,4 +98,13 @@ class Wilayah extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public static function getWilayah() {
+        $wilayahList = array();
+        $data = self::model()->findAll();
+        foreach ($data as $wilayah) {
+            $wilayahList[$wilayah->id] = $wilayah->nama;
+        }
+        return $wilayahList;
+    }
 }

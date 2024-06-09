@@ -27,7 +27,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenis_kelamin'); ?>
-		<?php echo $form->textField($model,'jenis_kelamin',array('size'=>9,'maxlength'=>9)); ?>
+		<?php echo $form->dropDownList($model, 'jenis_kelamin', array(
+			'laki-laki' => 'Laki-Laki',
+			'perempuan' => 'Perempuan',
+		), array('prompt'=>'Pilih Jenis Kelamin')); ?>
 		<?php echo $form->error($model,'jenis_kelamin'); ?>
 	</div>
 
@@ -39,7 +42,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'wilayah_id'); ?>
-		<?php echo $form->textField($model,'wilayah_id'); ?>
+		<?php echo $form->dropDownList($model, 'wilayah_id', Wilayah::getWilayah(), array('prompt'=>'Pilih Wilayah')); ?>
 		<?php echo $form->error($model,'wilayah_id'); ?>
 	</div>
 

@@ -3,7 +3,7 @@
 /* @var $model Pegawai */
 
 $this->breadcrumbs=array(
-	'Pegawais'=>array('index'),
+	'Pegawai'=>array('index'),
 	'Create',
 );
 

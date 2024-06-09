@@ -3,8 +3,8 @@
 /* @var $model Pegawai */
 
 $this->breadcrumbs=array(
-	'Pegawais'=>array('index'),
-	$model->id,
+	'Pegawai'=>array('index'),
+	$model->nama,
 );
 
 $this->menu=array(
@@ -16,17 +16,15 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Pegawai #<?php echo $model->id; ?></h1>
+<h1>View Pegawai #<?php echo $model->nama; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
 		'nama',
 		'jenis_kelamin',
 		'jabatan',
-		'wilayah_id',
+		'wilayah.nama',
 		'created_at',
-		'updated_at',
 	),
 )); ?>

@@ -3,8 +3,8 @@
 /* @var $model Pegawai */
 
 $this->breadcrumbs=array(
-	'Pegawais'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
+	'Pegawai'=>array('index'),
+	$model->nama=>array('view','id'=>$model->id),
 	'Update',
 );
 
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Pegawai <?php echo $model->id; ?></h1>
+<h1>Update Pegawai <?php echo $model->nama; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

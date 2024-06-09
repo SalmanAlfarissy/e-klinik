@@ -39,7 +39,7 @@ class Pegawai extends CActiveRecord
 			array('jenis_kelamin', 'length', 'max'=>9),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, jenis_kelamin, jabatan, wilayah_id, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('nama, jenis_kelamin, jabatan, wilayah_id, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,7 +67,6 @@ class Pegawai extends CActiveRecord
 			'jabatan' => 'Jabatan',
 			'wilayah_id' => 'Wilayah',
 			'created_at' => 'Created At',
-			'updated_at' => 'Updated At',
 		);
 	}
 
@@ -88,14 +87,13 @@ class Pegawai extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$criteria->with = array('wilayah');
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('t.nama',$this->nama,true);
 		$criteria->compare('jenis_kelamin',$this->jenis_kelamin,true);
 		$criteria->compare('jabatan',$this->jabatan,true);
-		$criteria->compare('wilayah_id',$this->wilayah_id);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
+		$criteria->compare('wilayah.nama',$this->wilayah_id,true);
+		$criteria->compare('t.created_at',$this->created_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
