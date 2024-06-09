@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'E-Klinik',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -77,6 +77,7 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName' => false,
 			'rules'=>array(
 				'site/page/<view:\w+>' => 'site/page',
 				'gii' => 'gii',
