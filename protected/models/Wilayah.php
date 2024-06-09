@@ -34,7 +34,7 @@ class Wilayah extends CActiveRecord
 			array('nama', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, nama, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +59,6 @@ class Wilayah extends CActiveRecord
 			'id' => 'ID',
 			'nama' => 'Nama',
 			'created_at' => 'Created At',
-			'updated_at' => 'Updated At',
 		);
 	}
 
@@ -81,10 +80,8 @@ class Wilayah extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('nama',$this->nama,true);
 		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1755,3 +1755,9 @@ Stack trace:
 #34 {main}
 REQUEST_URI=/user/admin
 ---
+2024/06/09 04:47:09 [warning] [application] Failed to set unsafe attribute "id" of "User".
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/UserController.php (147)
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
+2024/06/09 04:47:12 [warning] [application] Failed to set unsafe attribute "id" of "User".
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/UserController.php (147)
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)

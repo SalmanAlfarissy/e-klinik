@@ -3,7 +3,7 @@
 /* @var $model Wilayah */
 
 $this->breadcrumbs=array(
-	'Wilayahs'=>array('index'),
+	'Wilayah'=>array('index'),
 	'Create',
 );
 
