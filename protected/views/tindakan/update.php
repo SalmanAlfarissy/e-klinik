@@ -3,8 +3,8 @@
 /* @var $model Tindakan */
 
 $this->breadcrumbs=array(
-	'Tindakans'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
+	'Tindakan'=>array('index'),
+	$model->nama=>array('view','id'=>$model->id),
 	'Update',
 );
 
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Tindakan <?php echo $model->id; ?></h1>
+<h1>Update Tindakan <?php echo $model->nama; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,8 +3,8 @@
 /* @var $model Tindakan */
 
 $this->breadcrumbs=array(
-	'Tindakans'=>array('index'),
-	$model->id,
+	'Tindakan'=>array('index'),
+	$model->nama,
 );
 
 $this->menu=array(
@@ -16,16 +16,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Tindakan #<?php echo $model->id; ?></h1>
+<h1>View Tindakan #<?php echo $model->nama; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
 		'nama',
 		'deskripsi',
 		'biaya',
 		'created_at',
-		'updated_at',
 	),
 )); ?>

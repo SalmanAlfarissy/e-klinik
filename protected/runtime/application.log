@@ -2533,3 +2533,12 @@ in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
 2024/06/09 06:12:36 [warning] [application] Failed to set unsafe attribute "id" of "Pegawai".
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/PegawaiController.php (139)
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
+2024/06/09 07:13:13 [warning] [application] Failed to set unsafe attribute "id" of "Tindakan".
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/TindakanController.php (139)
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
+2024/06/09 07:13:19 [warning] [application] Failed to set unsafe attribute "id" of "Tindakan".
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/TindakanController.php (139)
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
+2024/06/09 07:13:23 [warning] [application] Failed to set unsafe attribute "id" of "Tindakan".
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/TindakanController.php (139)
+in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)

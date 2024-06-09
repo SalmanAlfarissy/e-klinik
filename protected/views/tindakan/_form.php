@@ -33,7 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'biaya'); ?>
-		<?php echo $form->textField($model,'biaya',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->numberField($model,'biaya',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'biaya'); ?>
 	</div>
 
