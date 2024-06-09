@@ -39,6 +39,8 @@
 		$isObatRoute = strpos($currentRoute, 'obat') === 0;
 		$isTransaksiRoute = strpos($currentRoute, 'transaksi') === 0;
 		$isSrbacRoute = strpos($currentRoute, 'srbac') === 0;
+		$isInformasiRoute = strpos($currentRoute, 'informasi') === 0;
+		$isLaporanRoute = strpos($currentRoute, 'laporan') === 0;
 
 		$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
@@ -50,6 +52,8 @@
 				array('label'=>'Obat', 'url'=>array('/obat'), 'active'=>$isObatRoute),
 				array('label'=>'SRBAC', 'url'=>array('/srbac'), 'visible'=>Yii::app()->user->checkAccess('admin'),'active'=>$isSrbacRoute),
 				array('label'=>'Transaksi', 'url'=>array('/transaksi'), 'active'=>$isTransaksiRoute),
+				array('label'=>'Informasi', 'url'=>array('/informasi'), 'active'=>$isInformasiRoute),
+				array('label'=>'Laporan', 'url'=>array('/laporan'), 'active'=>$isLaporanRoute),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
