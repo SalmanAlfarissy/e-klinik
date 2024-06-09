@@ -34,7 +34,7 @@ class User extends CActiveRecord
 			array('nama, username, password, email', 'length', 'max' => 255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, username, password, email, created_at, updated_at', 'safe', 'on' => 'search'),
+			array('nama, username, email, created_at', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -96,10 +96,8 @@ class User extends CActiveRecord
 			'id' => 'ID',
 			'nama' => 'Nama',
 			'username' => 'Username',
-			'password' => 'Password',
 			'email' => 'Email',
 			'created_at' => 'Created At',
-			'updated_at' => 'Updated At',
 		);
 	}
 
@@ -121,13 +119,10 @@ class User extends CActiveRecord
 
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('id', $this->id);
 		$criteria->compare('nama', $this->nama, true);
 		$criteria->compare('username', $this->username, true);
-		$criteria->compare('password', $this->password, true);
 		$criteria->compare('email', $this->email, true);
 		$criteria->compare('created_at', $this->created_at, true);
-		$criteria->compare('updated_at', $this->updated_at, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,
