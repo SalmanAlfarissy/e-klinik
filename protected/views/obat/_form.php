@@ -33,7 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'harga'); ?>
-		<?php echo $form->textField($model,'harga',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->numberField($model,'harga',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'harga'); ?>
 	</div>
 

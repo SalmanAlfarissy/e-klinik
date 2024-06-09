@@ -3,7 +3,7 @@
 /* @var $model Obat */
 
 $this->breadcrumbs=array(
-	'Obats'=>array('index'),
+	'Obat'=>array('index'),
 	'Manage',
 );
 
@@ -26,12 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Obats</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<h1>Manage Obat</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -45,12 +40,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		array(
+			'name' => 'id',
+			'value' => '$row+1',
+			'header' => 'No'
+		),
 		'nama',
 		'deskripsi',
 		'harga',
 		'created_at',
-		'updated_at',
 		array(
 			'class'=>'CButtonColumn',
 		),

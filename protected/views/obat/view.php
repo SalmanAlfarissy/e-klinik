@@ -3,8 +3,8 @@
 /* @var $model Obat */
 
 $this->breadcrumbs=array(
-	'Obats'=>array('index'),
-	$model->id,
+	'Obat'=>array('index'),
+	$model->nama,
 );
 
 $this->menu=array(
@@ -16,16 +16,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Obat #<?php echo $model->id; ?></h1>
+<h1>View Obat #<?php echo $model->nama; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
 		'nama',
 		'deskripsi',
 		'harga',
 		'created_at',
-		'updated_at',
 	),
 )); ?>

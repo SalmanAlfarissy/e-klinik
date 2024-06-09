@@ -3,7 +3,7 @@
 /* @var $model Obat */
 
 $this->breadcrumbs=array(
-	'Obats'=>array('index'),
+	'Obat'=>array('index'),
 	'Create',
 );
 

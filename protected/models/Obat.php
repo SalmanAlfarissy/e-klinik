@@ -38,7 +38,7 @@ class Obat extends CActiveRecord
 			array('deskripsi', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, deskripsi, harga, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('nama, deskripsi, harga, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,7 +65,6 @@ class Obat extends CActiveRecord
 			'deskripsi' => 'Deskripsi',
 			'harga' => 'Harga',
 			'created_at' => 'Created At',
-			'updated_at' => 'Updated At',
 		);
 	}
 
@@ -87,12 +86,10 @@ class Obat extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('nama',$this->nama,true);
 		$criteria->compare('deskripsi',$this->deskripsi,true);
 		$criteria->compare('harga',$this->harga,true);
 		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

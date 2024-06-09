@@ -2542,3 +2542,33 @@ in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
 2024/06/09 07:13:23 [warning] [application] Failed to set unsafe attribute "id" of "Tindakan".
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/TindakanController.php (139)
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
+2024/06/09 07:25:58 [error] [exception.CException] CException: Property "CDataColumn.nama" is not defined. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CComponent.php:172
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php(227): CComponent->__set('nama', 'id')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/zii/widgets/grid/CGridView.php(404): YiiBase::createComponent(Array, Object(CGridView))
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/zii/widgets/grid/CGridView.php(375): CGridView->initColumns()
+#3 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(147): CGridView->init()
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/obat/admin.php(38): CBaseController->widget('zii.widgets.gri...', Array)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', Array, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', Array, true)
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('admin', Array, true)
+#10 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/ObatController.php(141): CController->render('admin', Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): ObatController->actionAdmin()
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(291): CFilterChain->run()
+#19 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('admin')
+#21 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('obat/admin')
+#22 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/obat/admin
+HTTP_REFERER=http://localhost:8080/obat/index
+---
