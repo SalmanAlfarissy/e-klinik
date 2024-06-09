@@ -106,4 +106,13 @@ class Obat extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public static function getObat() {
+        $obatList = array();
+        $data = self::model()->findAll();
+        foreach ($data as $obat) {
+            $obatList[$obat->id] = $obat->nama;
+        }
+        return $obatList;
+    }
 }

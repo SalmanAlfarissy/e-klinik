@@ -6,7 +6,7 @@ class TransaksiController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout = '//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -27,20 +27,29 @@ class TransaksiController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+			array(
+				'allow',  // allow all users to perform 'index' and 'view' actions
+				'actions' => array('index', 'view'),
+				'users' => array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+			array(
+				'allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions' => array('create', 'update'),
+				'users' => array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+			array(
+				'allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions' => array('admin', 'delete'),
+				'users' => array('admin'),
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
+			array(
+				'allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions' => array('tindakanObat'),
+				'users' => array('admin'),
+			),
+			array(
+				'deny',  // deny all users
+				'users' => array('*'),
 			),
 		);
 	}
@@ -51,8 +60,15 @@ class TransaksiController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+		$pasienTindakan = PasienTindakan::model()->with('pendaftaranPasien', 'tindakan')
+                    ->findAll('pendaftaranPasien.id = :id', array(':id' => $id));
+		$pasienObat = PasienObat::model()->with('pendaftaranPasien', 'obat')
+                    ->findAll('pendaftaranPasien.id = :id', array(':id' => $id));
+
+		$this->render('view', array(
+			'model' => $this->loadModel($id),
+			'pasienTindakan' => $pasienTindakan,
+			'pasienObat' => $pasienObat,
 		));
 	}
 
@@ -62,20 +78,19 @@ class TransaksiController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new PendaftaranPasien;
+		$model = new PendaftaranPasien;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['PendaftaranPasien']))
-		{
-			$model->attributes=$_POST['PendaftaranPasien'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		if (isset($_POST['PendaftaranPasien'])) {
+			$model->attributes = $_POST['PendaftaranPasien'];
+			if ($model->save())
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
+		$this->render('create', array(
+			'model' => $model,
 		));
 	}
 
@@ -86,20 +101,19 @@ class TransaksiController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model = $this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['PendaftaranPasien']))
-		{
-			$model->attributes=$_POST['PendaftaranPasien'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		if (isset($_POST['PendaftaranPasien'])) {
+			$model->attributes = $_POST['PendaftaranPasien'];
+			if ($model->save())
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
-		$this->render('update',array(
-			'model'=>$model,
+		$this->render('update', array(
+			'model' => $model,
 		));
 	}
 
@@ -113,7 +127,7 @@ class TransaksiController extends Controller
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
+		if (!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
@@ -122,9 +136,9 @@ class TransaksiController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('PendaftaranPasien');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$dataProvider = new CActiveDataProvider('PendaftaranPasien');
+		$this->render('index', array(
+			'dataProvider' => $dataProvider,
 		));
 	}
 
@@ -133,13 +147,13 @@ class TransaksiController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new PendaftaranPasien('search');
+		$model = new PendaftaranPasien('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['PendaftaranPasien']))
-			$model->attributes=$_GET['PendaftaranPasien'];
+		if (isset($_GET['PendaftaranPasien']))
+			$model->attributes = $_GET['PendaftaranPasien'];
 
-		$this->render('admin',array(
-			'model'=>$model,
+		$this->render('admin', array(
+			'model' => $model,
 		));
 	}
 
@@ -152,9 +166,9 @@ class TransaksiController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=PendaftaranPasien::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+		$model = PendaftaranPasien::model()->findByPk($id);
+		if ($model === null)
+			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;
 	}
 
@@ -164,10 +178,72 @@ class TransaksiController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='pendaftaran-pasien-form')
-		{
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'pendaftaran-pasien-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionTindakanObat($id)
+	{
+		$pasienObat = new PasienObat();
+		$pasienTindakan = new PasienTindakan();
+
+		$dataObat = isset($_POST['PasienObat']) ? $_POST['PasienObat'] : null;
+		$dataTindakan = isset($_POST['PasienTindakan']) ? $_POST['PasienTindakan'] : null;
+
+		$success = true;
+		
+		if ($dataObat !== null && $dataTindakan !== null) {
+
+			foreach ($dataObat['obat_id'] as $index=>$item) {
+				$dataObat[$index]['pendaftaran_pasien_id'] = $id;
+				$dataObat[$index]['obat_id'] = $item;
+			}
+			foreach ($dataObat['jumlah'] as $index=>$item) {
+				$dataObat[$index]['jumlah'] = $item;
+			}
+			unset($dataObat['obat_id']);
+			unset($dataObat['jumlah']);
+
+			foreach ($dataTindakan['tindakan_id'] as $index=>$item) {
+				$dataTindakan[$index]['pendaftaran_pasien_id'] = $id;
+				$dataTindakan[$index]['tindakan_id'] = $item;
+			}
+			unset($dataTindakan['tindakan_id']);
+
+			foreach ($dataTindakan as $item) {
+				$pasienTindakan = new PasienTindakan();
+				$pasienTindakan->attributes = $item;
+				if (!$pasienTindakan->save()) {
+					$success = false;
+				}
+			}
+	
+			foreach ($dataObat as $item) {
+				$pasienObat = new PasienObat();
+				$pasienObat->attributes = $item;
+				if (!$pasienObat->save()) {
+					$success = false;
+				}
+			}
+
+			if ($success) {
+				$this->redirect(array('view', 'id' => $id));
+			} else {
+				Yii::app()->user->setFlash('error', 'Terjadi kesalahan saat menyimpan data.');
+			}
+			
+		}
+
+		$this->render('tindakanObat', array(
+			'model' => $this->loadModel($id),
+			'pasienObat' => $pasienObat,
+			'pasienTindakan' => $pasienTindakan,
+		));
 	}
 }

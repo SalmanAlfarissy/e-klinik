@@ -13,6 +13,7 @@ $this->menu=array(
 	array('label'=>'Create PendaftaranPasien', 'url'=>array('create')),
 	array('label'=>'View PendaftaranPasien', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage PendaftaranPasien', 'url'=>array('admin')),
+	array('label'=>'Tindakan dan Obat Pasien', 'url'=>array('tindakanObat', 'id'=>$model->id)),
 );
 ?>
 

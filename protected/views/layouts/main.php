@@ -15,6 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 
+	<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -30,13 +32,13 @@
 		<?php 
 		$currentRoute = Yii::app()->controller->route;
 		$isHomeRoute = ($currentRoute === 'site/index' || $currentRoute === '');
-		$isUserRoute = strpos($currentRoute, 'user') !== false;
-		$isWilayahRoute = strpos($currentRoute, 'wilayah') !== false;
-		$isPegaswaiRoute = strpos($currentRoute, 'pegawai') !== false;
-		$isTindakanRoute = strpos($currentRoute, 'tindakan') !== false;
-		$isObatRoute = strpos($currentRoute, 'obat') !== false;
-		$isTransaksiRoute = strpos($currentRoute, 'transaksi') !== false;
-		$isSrbacRoute = strpos($currentRoute, 'srbac') !== false;
+		$isUserRoute = strpos($currentRoute, 'user') === 0;
+		$isWilayahRoute = strpos($currentRoute, 'wilayah') === 0;
+		$isPegaswaiRoute = strpos($currentRoute, 'pegawai') === 0;
+		$isTindakanRoute = strpos($currentRoute, 'tindakan') === 0;
+		$isObatRoute = strpos($currentRoute, 'obat') === 0;
+		$isTransaksiRoute = strpos($currentRoute, 'transaksi') === 0;
+		$isSrbacRoute = strpos($currentRoute, 'srbac') === 0;
 
 		$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(

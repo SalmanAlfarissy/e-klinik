@@ -65,7 +65,7 @@ $('.search-form form').submit(function(){
                 'tindakan'=>array(
                     'label'=>'Tindakan',
                     'imageUrl'=>Yii::app()->request->baseUrl.'/images/medicine.png',
-                    'url'=>'Yii::app()->createUrl("/transaksi/view", array("id"=>$data->id))',
+                    'url'=>'Yii::app()->createUrl("/transaksi/tindakanObat", array("id"=>$data->id))',
                 ),
                 'delete'=>array(
                     'visible'=>'false',

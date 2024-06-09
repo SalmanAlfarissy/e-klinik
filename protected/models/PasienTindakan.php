@@ -1,27 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "tindakan".
+ * This is the model class for table "pasien_tindakan".
  *
- * The followings are the available columns in table 'tindakan':
+ * The followings are the available columns in table 'pasien_tindakan':
  * @property integer $id
- * @property string $nama
- * @property string $deskripsi
- * @property string $biaya
+ * @property integer $pendaftaran_pasien_id
+ * @property integer $tindakan_id
  * @property string $created_at
  * @property string $updated_at
  *
  * The followings are the available model relations:
- * @property PasienTindakan[] $pasienTindakans
+ * @property PendaftaranPasien $pendaftaranPasien
+ * @property Tindakan $tindakan
  */
-class Tindakan extends CActiveRecord
+class PasienTindakan extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tindakan';
+		return 'pasien_tindakan';
 	}
 
 	/**
@@ -32,13 +32,11 @@ class Tindakan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, biaya', 'required'),
-			array('nama', 'length', 'max'=>255),
-			array('biaya', 'length', 'max'=>10),
-			array('deskripsi', 'safe'),
+			array('pendaftaran_pasien_id, tindakan_id', 'required'),
+			array('pendaftaran_pasien_id, tindakan_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nama, deskripsi, biaya, created_at', 'safe', 'on'=>'search'),
+			array('id, pendaftaran_pasien_id, tindakan_id, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +48,8 @@ class Tindakan extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pasienTindakans' => array(self::HAS_MANY, 'PasienTindakan', 'tindakan_id'),
+			'pendaftaranPasien' => array(self::BELONGS_TO, 'PendaftaranPasien', 'pendaftaran_pasien_id'),
+			'tindakan' => array(self::BELONGS_TO, 'Tindakan', 'tindakan_id'),
 		);
 	}
 
@@ -61,9 +60,8 @@ class Tindakan extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nama' => 'Nama',
-			'deskripsi' => 'Deskripsi',
-			'biaya' => 'Biaya',
+			'pendaftaran_pasien_id' => 'Pendaftaran Pasien',
+			'tindakan_id' => 'Tindakan',
 			'created_at' => 'Created At',
 		);
 	}
@@ -86,9 +84,9 @@ class Tindakan extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('deskripsi',$this->deskripsi,true);
-		$criteria->compare('biaya',$this->biaya,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('pendaftaran_pasien_id',$this->pendaftaran_pasien_id);
+		$criteria->compare('tindakan_id',$this->tindakan_id);
 		$criteria->compare('created_at',$this->created_at,true);
 
 		return new CActiveDataProvider($this, array(
@@ -100,20 +98,10 @@ class Tindakan extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Tindakan the static model class
+	 * @return PasienTindakan the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-
-	public static function getListData()
-    {
-        $models = self::model()->findAll();
-        $listData = array();
-        foreach ($models as $model) {
-            $listData[$model->id] = $model->nama;
-        }
-        return $listData;
-    }
 }
