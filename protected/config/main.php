@@ -80,6 +80,9 @@ return array(
 			'showScriptName' => false,
 			'rules'=>array(
 				'site/page/<view:\w+>' => 'site/page',
+				'transaksi/pendaftaranPasien' => 'transaksi/create',
+				'transaksi/updateDataPasien/<id:\d+>' => 'transaksi/update',
+				'transaksi/managePasien' => 'transaksi/admin',
 				'gii' => 'gii',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
