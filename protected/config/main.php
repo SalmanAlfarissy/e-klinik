@@ -59,7 +59,6 @@ return array(
 
 	// application components
 	'components'=>array(
-
 		'authManager' => array(
             'class' => 'CDbAuthManager', 
             'connectionID' => 'db', 

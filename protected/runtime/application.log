@@ -5181,3 +5181,165 @@ REQUEST_URI=/informasi/index
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/informasi/admin.php (33)
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/InformasiController.php (147)
 in /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php (13)
+2024/06/10 00:09:19 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "login". in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/login
+---
+2024/06/10 00:09:20 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
+2024/06/10 00:09:41 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
+2024/06/10 00:09:54 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
+2024/06/10 00:11:58 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
+2024/06/10 00:12:35 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
+2024/06/10 00:14:07 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
+2024/06/10 00:14:33 [error] [exception.CException] CException: Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/YiiBase.php:330
+Stack trace:
+#0 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(LaporanController), 'ext.highcharts....', Array)
+#2 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(181): CBaseController->createWidget('ext.highcharts....', Array)
+#3 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/views/laporan/index.php(11): CBaseController->widget('ext.highcharts....', Array)
+#4 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(126): require('/Users/salmanal...')
+#5 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/salmanal...', NULL, true)
+#6 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(872): CBaseController->renderFile('/Users/salmanal...', NULL, true)
+#7 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#8 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/protected/controllers/LaporanController.php(7): CController->render('index')
+#9 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/actions/CInlineAction.php(49): LaporanController->actionIndex()
+#10 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/web/CWebApplication.php(141): CWebApplication->runController('laporan')
+#15 /Users/salmanalfarissy/Documents/myproject/yii/yii-1.1.29/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/salmanalfarissy/Documents/myproject/yii/e-klinik/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/laporan
+---
