@@ -19,6 +19,7 @@ return array(
 		'application.commands.shell.*',
 		'system.utils.CPasswordHelper',
 		'application.modules.srbac.controllers.SBaseController',
+		'application.extensions.jqBarGraph.*',
 	),
 
 	'modules'=>array(

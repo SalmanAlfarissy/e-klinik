@@ -4,35 +4,27 @@ class LaporanController extends Controller
 {
 	public function actionIndex()
 	{
-		$chartData = array(
-			array('name' => 'Januari', 'y' => 100),
-			array('name' => 'Februari', 'y' => 150),
-			array('name' => 'Maret', 'y' => 200),
-			array('name' => 'April', 'y' => 180),
-			array('name' => 'Mei', 'y' => 250),
-			array('name' => 'Juni', 'y' => 300),
-		);
-	
-		$this->render('index', array('chartData' => $chartData));
+
+		$years = Yii::app()->db->createCommand()
+			->select('YEAR(created_at) as tahun')
+			->from('pendaftaran_pasien')
+			->group('YEAR(created_at)')
+			->queryColumn();
+
+		$data = array();
+
+		foreach ($years as $tahun) {
+			$count = Yii::app()->db->createCommand()
+				->select('COUNT(*)')
+				->from('pendaftaran_pasien')
+				->where('YEAR(created_at) = :tahun', array(':tahun' => $tahun))
+				->queryScalar();
+
+			$data[] = array($count, $tahun);
+		}
+
+		$this->render('index', array('data'=>$data,));
 	}
-
-	public function actionGraph()
-    {
-        require_once(Yii::app()->basePath . '/extensions/jpgraph/src/jpgraph.php');
-        require_once(Yii::app()->basePath . '/extensions/jpgraph/src/jpgraph_line.php');
-
-        $data = array(40, 21, 17, 14, 23);
-
-        $graph = new Graph(400, 300);
-        $graph->SetScale("textlin");
-
-        $lineplot = new LinePlot($data);
-        $graph->Add($lineplot);
-
-        $graph->title->Set("Contoh Grafik Garis");
-
-        $graph->Stroke();
-    }
 
 	// Uncomment the following methods and override them if needed
 	/*
