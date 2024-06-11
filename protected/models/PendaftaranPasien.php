@@ -19,6 +19,8 @@
  */
 class PendaftaranPasien extends CActiveRecord
 {
+	public $total_biaya;
+	public $tanggal_pebayaran;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -42,7 +44,7 @@ class PendaftaranPasien extends CActiveRecord
 			array('alamat_pasien', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nama_pasien, jenis_kelamin, alamat_pasien, tanggal_lahir, created_at', 'safe', 'on'=>'search'),
+			array('nama_pasien, total_biaya, tanggal_pebayaran, jenis_kelamin, alamat_pasien, tanggal_lahir, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +58,7 @@ class PendaftaranPasien extends CActiveRecord
 		return array(
 			'pasienObats' => array(self::HAS_MANY, 'PasienObat', 'pendaftaran_pasien_id'),
 			'pasienTindakans' => array(self::HAS_MANY, 'PasienTindakan', 'pendaftaran_pasien_id'),
-			'pembayarans' => array(self::HAS_MANY, 'Pembayaran', 'pendaftaran_pasien_id'),
+			'pembayarans' => array(self::HAS_ONE, 'Pembayaran', 'pendaftaran_pasien_id'),
 		);
 	}
 
@@ -71,6 +73,8 @@ class PendaftaranPasien extends CActiveRecord
 			'jenis_kelamin' => 'Jenis Kelamin',
 			'alamat_pasien' => 'Alamat Pasien',
 			'tanggal_lahir' => 'Tanggal Lahir',
+			'total_biaya' => 'Total Bayar',
+			'tanggal_pebayaran' => 'Tanggal Pembayaran',
 			'created_at' => 'Created At',
 		);
 	}
@@ -99,6 +103,10 @@ class PendaftaranPasien extends CActiveRecord
 		$criteria->compare('alamat_pasien',$this->alamat_pasien,true);
 		$criteria->compare('tanggal_lahir',$this->tanggal_lahir,true);
 		$criteria->compare('created_at',$this->created_at,true);
+
+		$criteria->with = array('pasienObats', 'pasienTindakans', 'pembayarans');
+		$criteria->compare('pembayarans.total_biaya', $this->total_biaya, true);
+		$criteria->compare('pembayarans.created_at', $this->tanggal_pebayaran, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

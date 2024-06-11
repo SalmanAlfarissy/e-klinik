@@ -15,6 +15,8 @@
  */
 class Pembayaran extends CActiveRecord
 {
+	public $nama_pasien;
+	public $total_bayar;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -31,12 +33,13 @@ class Pembayaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pendaftaran_pasien_id, total_biaya', 'required'),
+			array('pendaftaran_pasien_id, total_biaya, total_bayar', 'required'),
 			array('pendaftaran_pasien_id', 'numerical', 'integerOnly'=>true),
 			array('total_biaya', 'length', 'max'=>10),
+			array('total_bayar', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pendaftaran_pasien_id, total_biaya, created_at', 'safe', 'on'=>'search'),
+			array('pendaftaran_pasien_id, nama_pasien, total_biaya, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +62,7 @@ class Pembayaran extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'nama_pasien' => 'Nama Pasien',
 			'pendaftaran_pasien_id' => 'Pasien',
 			'total_biaya' => 'Total Biaya',
 			'created_at' => 'Created At',
@@ -87,6 +91,9 @@ class Pembayaran extends CActiveRecord
 		$criteria->compare('pendaftaran_pasien_id',$this->pendaftaran_pasien_id);
 		$criteria->compare('total_biaya',$this->total_biaya,true);
 		$criteria->compare('created_at',$this->created_at,true);
+
+		$criteria->with = array('pendaftaranPasien');
+        $criteria->compare('pendaftaranPasien.nama_pasien', $this->nama_pasien, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

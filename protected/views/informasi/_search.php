@@ -15,6 +15,16 @@
 		<?php echo $form->label($model,'nama_pasien'); ?>
 		<?php echo $form->textField($model,'nama_pasien'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->label($model,'tanggal_pebayaran'); ?>
+		<?php echo $form->textField($model,'tanggal_pebayaran'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'total_biaya'); ?>
+		<?php echo $form->textField($model,'total_biaya',array('size'=>10,'maxlength'=>10)); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>

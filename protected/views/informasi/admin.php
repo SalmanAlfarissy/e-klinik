@@ -3,8 +3,12 @@
 /* @var $model Pembayaran */
 
 $this->breadcrumbs=array(
-	'Pembayaran'=>array('index'),
+	'Informasi'=>array('index'),
 	'Manage Pembayaran',
+);
+
+$this->menu=array(
+	array('label'=>'Informasi', 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -21,7 +25,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Pembayarans</h1>
+<h1>Manage Pembayaran</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -31,29 +35,41 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'pendaftaran-pasien-grid',
+	'id'=>'pembayaran-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		array(
-			'name' => 'id',
-			'value' => '$row+1',
-			'header' => 'No',
+			'name'=>'id',
+			'value'=>'$row+1',
+			'header'=>'No'
 		),
 		'nama_pasien',
-		'pembayarans.total_biaya',
-		'pembayarans.created_at',
+		array(
+			'name' => 'total_biaya',
+			'value' => '$data->pembayarans->total_biaya ?? 0' 
+		),
+		array(
+			'name' => 'tanggal_pebayaran',
+			'value' => '$data->pembayarans->created_at ?? ""'
+		),
 		array(
             'class'=>'CButtonColumn',
-            'template'=>'{payment}',
+            'template'=>'{view}{payment}',
             'buttons'=>array(
+				'view'=>array(
+					'url'=>'Yii::app()->createUrl("/informasi/view", array("id"=>$data->pembayarans->id))',
+					'visible'=> '!empty($data->pembayarans->id) ?? true',
+				),
                 'payment'=>array(
                     'label'=>'Payment',
                     'imageUrl'=>Yii::app()->request->baseUrl.'/images/payment.png',
-                    'url'=>'Yii::app()->createUrl("/informasi/create", array("id"=>$data->id))',
-                ),
-                'delete'=>array(
-                    'visible'=>'false',
+                    'url'=>'
+						empty($data->pasienObats) && empty($data->pasienTindakans) ? 
+						Yii::app()->createUrl("/transaksi/tindakanObat", array("id"=>$data->id)) :
+						Yii::app()->createUrl("/informasi/create", array("id"=>$data->id))
+					',
+					'visible'=> 'empty($data->pembayarans->id) ?? false',
                 ),
             ),
         ),

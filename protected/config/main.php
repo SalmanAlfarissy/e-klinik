@@ -83,6 +83,8 @@ return array(
 				'transaksi/pendaftaranPasien' => 'transaksi/create',
 				'transaksi/updateDataPasien/<id:\d+>' => 'transaksi/update',
 				'transaksi/managePasien' => 'transaksi/admin',
+				'informasi/managePembayaran' => 'informasi/admin',
+				'informasi/pembayaran/<id:\d+>' => 'informasi/create',
 				'gii' => 'gii',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

@@ -29,7 +29,7 @@ class InformasiController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +37,7 @@ class InformasiController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,18 +62,17 @@ class InformasiController extends Controller
 	 */
 	public function actionCreate($id)
 	{
-		$pasien = PendaftaranPasien::model()->with('pasienObats', 'pasienTindakans', 'pembayarans')->findByPk($id);
 		$model=new Pembayaran;
+		$pasien = PendaftaranPasien::model()->with('pasienObats', 'pasienTindakans')->findByPk($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-
 		if(isset($_POST['Pembayaran']))
 		{
-			$_POST['Pembayaran']['pendaftaran_pasien_id'] = $pasien->id;
-			
+			$_POST['Pembayaran']['pendaftaran_pasien_id'] = $id;
 			$model->attributes=$_POST['Pembayaran'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -85,50 +84,11 @@ class InformasiController extends Controller
 	}
 
 	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Pembayaran']))
-		{
-			$model->attributes=$_POST['Pembayaran'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
-
-	/**
 	 * Lists all models.
 	 */
-	public function actionAdmin()
+	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Pembayaran');
-		// $dataProvider = PendaftaranPasien::model()->with('pasienObats', 'pasienTindakans', 'pembayarans')->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -137,24 +97,17 @@ class InformasiController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionIndex()
+	public function actionAdmin()
 	{
-		$model = new PendaftaranPasien('search');
+		$model=new PendaftaranPasien('search');
+
 		$model->unsetAttributes();  // clear any default values
-		if (isset($_GET['PendaftaranPasien']))
-			$model->attributes = $_GET['PendaftaranPasien'];
-
-		$this->render('admin', array(
-			'model' => $model,
+		if(isset($_GET['PendaftaranPasien']))
+			$model->attributes=$_GET['PendaftaranPasien'];
+		
+		$this->render('admin',array(
+			'model'=>$model,
 		));
-		// $model=new Pembayaran('search');
-		// $model->unsetAttributes();  // clear any default values
-		// if(isset($_GET['Pembayaran']))
-		// 	$model->attributes=$_GET['Pembayaran'];
-
-		// $this->render('admin',array(
-		// 	'model'=>$model,
-		// ));
 	}
 
 	/**
@@ -166,7 +119,7 @@ class InformasiController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Pembayaran::model()->findByPk($id);
+		$model=Pembayaran::model()->with('pendaftaranPasien')->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
